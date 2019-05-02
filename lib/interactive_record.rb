@@ -68,10 +68,10 @@ class InteractiveRecord
       FROM #{table_name}
       WHERE ? = ?
     SQL
-    
+
     value = attribute_hash.values.first
     formatted_value = value.class == Fixnum ? value : "'#{value}'"
-    
+
     DB[:conn].execute(sql)
   end
 
