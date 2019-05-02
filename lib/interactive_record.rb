@@ -70,10 +70,11 @@ class InteractiveRecord
     SQL
 
     attribute.each do |k,v|
-      binding.pry
+      key = k.to_s
+      value = v
     end
-
-    DB[:conn].execute(sql, name, name)
+    binding.pry
+    DB[:conn].execute(sql, key, value)
   end
 
 end
