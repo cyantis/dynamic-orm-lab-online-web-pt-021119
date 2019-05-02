@@ -62,6 +62,7 @@ class InteractiveRecord
     SQL
 
     DB[:conn].execute(sql, name, name)
+    binding.pry
   end
 
   def self.find_by(attribute)
