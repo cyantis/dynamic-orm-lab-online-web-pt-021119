@@ -67,7 +67,7 @@ class InteractiveRecord
       sql = <<-SQL
         SELECT *
         FROM #{table_name}
-        WHERE #{attribute_hash.keys.first} = #{formatted_value}
+        WHERE #{attribute_hash.keys.first} = #{value}
       SQL
 
       DB[:conn].execute(sql)
