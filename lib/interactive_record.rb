@@ -61,8 +61,7 @@ class InteractiveRecord
       WHERE ? = ?
     SQL
 
-    DB[:conn].execute(sql, name, name)
-    binding.pry
+    self.new(DB[:conn].execute(sql, name, name))
   end
 
   def self.find_by(attribute)
