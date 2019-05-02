@@ -51,6 +51,7 @@ class InteractiveRecord
     SQL
 
     DB[:conn].execute(sql)
+    DB[:conn].results_as_hash = true
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM #{table_name_for_insert}")[0][0]
   end
 
