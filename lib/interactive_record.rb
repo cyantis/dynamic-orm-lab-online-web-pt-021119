@@ -71,7 +71,7 @@ class InteractiveRecord
 
     value = attribute.values.first
     formatted_value = value.class == Fixnum ? value : "'#{value}'"
-
+    binding.pry
     DB[:conn].execute(sql, value, formatted_value).first
   end
 
