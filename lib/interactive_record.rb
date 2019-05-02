@@ -73,7 +73,7 @@ class InteractiveRecord
     value = nil
 
     attribute.each do |k,v|
-      key = k.to_s
+      key = k
       value = v
     end
 
