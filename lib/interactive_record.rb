@@ -73,7 +73,8 @@ class InteractiveRecord
       WHERE #{value} = #{formatted_value}
     SQL
 
-    DB[:conn].execute(sql)
+    arr = []
+    arr << DB[:conn].execute(sql).first
   end
 
 end
