@@ -58,7 +58,7 @@ class InteractiveRecord
       FROM #{table_name}
       WHERE ? = ?
     SQL
-    binding.pry
+
     DB[:conn].execute(sql, name, name)
   end
 
@@ -76,7 +76,7 @@ class InteractiveRecord
       key = k.to_s
       value = v
     end
-  
+
     DB[:conn].execute(sql, key, value)
   end
 
