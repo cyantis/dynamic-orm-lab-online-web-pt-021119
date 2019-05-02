@@ -75,6 +75,7 @@ class InteractiveRecord
 
     arr = []
     arr << DB[:conn].execute(sql).first
+    arr
   end
 
 end
