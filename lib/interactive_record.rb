@@ -69,7 +69,7 @@ class InteractiveRecord
       WHERE ? = ?
     SQL
 
-    value = attribute_hash.values.first
+    value = attribute.values.first
     formatted_value = value.class == Fixnum ? value : "'#{value}'"
 
     DB[:conn].execute(sql)
