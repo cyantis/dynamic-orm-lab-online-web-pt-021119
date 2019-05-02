@@ -76,7 +76,7 @@ class InteractiveRecord
       key = k
       value = v
     end
-
+    binding.pry
     DB[:conn].execute(sql, key, value)
   end
 
