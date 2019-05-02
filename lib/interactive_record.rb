@@ -58,7 +58,7 @@ class InteractiveRecord
       FROM #{table_name}
       WHERE ? = ?
     SQL
-
+    binding.pry
     DB[:conn].execute(sql, name, name)
   end
 
@@ -68,7 +68,7 @@ class InteractiveRecord
       FROM #{table_name}
       WHERE ? = ?
     SQL
-    
+
     key = nil
     value = nil
 
