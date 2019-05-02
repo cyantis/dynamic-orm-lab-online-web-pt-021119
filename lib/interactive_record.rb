@@ -72,7 +72,7 @@ class InteractiveRecord
     value = attribute.values.first
     formatted_value = value.class == Fixnum ? value : "'#{value}'"
 
-    DB[:conn].execute(sql)
+    DB[:conn].execute(sql, value, formatted_value)
   end
 
 end
