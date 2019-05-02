@@ -68,16 +68,11 @@ class InteractiveRecord
       FROM #{table_name}
       WHERE ? = ?
     SQL
-
-    key = nil
-    value = nil
-
-    attribute.each do |k,v|
-      key = k
-      value = v
-    end
-    binding.pry
-    DB[:conn].execute(sql, key, value)
+    
+    value = attribute_hash.values.first
+    formatted_value = value.class == Fixnum ? value : "'#{value}'"
+    
+    DB[:conn].execute(sql)
   end
 
 end
